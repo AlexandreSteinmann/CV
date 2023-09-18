@@ -24,7 +24,9 @@
   * Template Name: Folio  * Updated: Jul 27 2023 with Bootstrap v5.3.1  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/  * Author: BootstrapMade.com  * License: https://bootstrapmade.com/license/  ======================================================== -->
   </head>
   <body>
-    <!-- ======= Header ======= -->
+    <p> <br>
+    </p>
+    <p><!-- ======= Header ======= --> </p>
     <header id="header" class="fixed-top header-inner-pages">
       <div class="container d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""
@@ -93,9 +95,9 @@
                       suis pas le plus grand fan de camembert d'un point de vue
                       visuel, mais dans ce type de rapport, il prend tout son
                       sens. Il ne sert pas seulement de représentation
-                      graphique, il est aussi un outil puissant pour filtrer et
-                      segmenter les données en toute simplicité, en plus de
-                      donner un aperçu de leur importance.<br>
+                      graphique, il est aussi un moyen de filtrer et segmenter
+                      les données en toute simplicité, en plus de donner un
+                      aperçu de leur importance.<br>
                       <br>
                       Maintenant, parlons du bridge. C'est là que ça devient
                       vraiment intéressant. Le bridge permet d'expliquer les
@@ -112,30 +114,87 @@
                         acheteurs ont payé <b>22 000€ de plus parce que les
                           prix au m² ont augmenté</b> et pour contrebalancer ont
                         <b>concédé à l'équivalent de 3000 € de surface</b>.&nbsp;</blockquote>
-                      <p class="mb-30">Les icones du bandeau de filtres sur la
-                        droite vous permettent de définir les dimensions
-                        principales : </p>
-                      <p class="mb-30">- Le temps : Actuel et en comparaison</p>
-                      <p class="mb-30">- Les caractéristiques du bien</p>
-                      <p class="mb-30">- La zone géographique</p>
-                      <p class="mb-30">En continuant, la carte est là pour un
-                        aspect ludique puisqu'elle est particulièrement
-                        interactive. Choisissez un KPI puis son mode de calcul
-                        pour colorez les départements.</p>
-                      <blockquote>
-                        <div style="text-align: center;"><img src="assets/img/blog-immo/map.gif"></div>
-                        <div style="text-align: center;"><br>
-                        </div>
-                        <div style="text-align: center;">Ici comment a évolué le
-                          prix du m² par département</div>
-                      </blockquote>
+                      Jetons un œil aux icônes du bandeau de filtres à droite,
+                      qui vous permettent de définir les principales dimensions
+                      :<br>
+                      <br>
+                      <ul>
+                        <li>Le temps : que ce soit l'actuel ou en comparaison</li>
+                        <li>Les caractéristiques du bien</li>
+                        <li>La zone géographique</li>
+                      </ul>
+                      Dans le monde de PowerBI, nous avons un petit jeu de
+                      cache-cache avec les filtres. Plutôt que de les disperser
+                      un peu partout sur le rapport, j'ai pris le parti de les
+                      rassembler tous au même endroit, à droite. Pourquoi ? Eh
+                      bien, la réponse se trouve dans la nature même de
+                      l'interface de PowerBI sur le web, qui dispose déjà d'un
+                      volet filtre sur la droite spécifiquement dédié aux
+                      filtres des visuels ou de la page.<br>
+                      <div style="text-align: center;"><img src="assets/img/blog-immo/filter.gif"
+                          alt=""></div>
+                      <div style="text-align: center;"><br>
+                      </div>
+                      Je l'ai fait pour simplifier la vie de nos utilisateurs.
+                      Parfois, il peut être difficile de trouver ces
+                      fonctionnalités, alors que la sélection de filtres par
+                      visuel peut être puissante lorsqu'il s'agit de manipuler
+                      des données. En réalité, de nombreuses requêtes ad hoc
+                      peuvent être résolues grâce à l'utilisation astucieuse de
+                      ces filtres au sein de nos tableaux de bord existants.<br>
+                      <br>
+                      En cachant certains filtres, nous parvenons à garder un
+                      aspect épuré tout en offrant une grande variété d'options.
+                      Bien sûr, cela nécessite un peu plus de prudence lors du
+                      développement de futurs rapports, mais cela en vaut la
+                      peine pour éviter de décourager nos utilisateurs, qui
+                      pourraient se retrouver submergés par une multitude
+                      d'options et de paramètres.</div>
+                    <div class="content-main single-post padDiv">
+                      <div style="text-align: center;"><img src="assets/img/blog-immo/title.gif"
+                          alt="" style="width: 305px; height: 254px;"><br>
+                      </div>
+                      Et pour rendre la vie encore plus facile, j'ai ajouté
+                      quelques titres indiquant les filtres sélectionnés. En fin
+                      de compte, si vous pouvez inclure des dates et des
+                      périmètres dans toutes les diapositives, c'est une
+                      excellente pratique. Vous savez, la question la plus
+                      courante lorsqu'on regarde un tableau, c'est : "C'est
+                      quand ?"</div>
+                    <div class="content-main single-post padDiv">En ce qui
+                      concerne la carte, son principal intérêt réside dans son
+                      interactivité. Vous pouvez choisir un indicateur clé de
+                      performance (KPI) et afficher sa valeur ou son évolution.
+                      Il convient de noter qu'un inconvénient majeur de PowerBI
+                      est l'absence de légende pour les visualisations
+                      cartographiques en forme. Heureusement, il existe une
+                      astuce toute simple pour contourner cette limitation :)</div>
+                    <div class="content-main single-post padDiv"><br>
+                      <div style="text-align: center;"><img src="assets/img/blog-immo/map.gif"></div>
+                      <div style="text-align: center;"><br>
+                      </div>
+                      <div style="text-align: center;"><br>
+                      </div>
                       <ul>
                       </ul>
                     </div>
-                    <div class="content-main single-post padDiv">En continuant,
-                      la carte est là pour un aspect ludique puisqu'elle est
-                      particulièrement interactive. Choisissez un KPI puis son
-                      mode de calcul pour colorez les départements.</div>
+                    Continuons avec le tableau, un élément incontournable,
+                    surtout si votre public est orienté vers le contrôle de
+                    gestion. Sans tableau, votre rapport risque de rester en
+                    jachère, car la culture d'Excel est encore solidement
+                    ancrée, et pour beaucoup, l'idée de ne pas pouvoir manier
+                    les données à leur guise est inconcevable. </div>
+                  <div class="col-md-12"><br>
+                  </div>
+                  <div class="col-md-12">Les paramètres de champ sont d'une
+                    utilité inestimable, même si certains pourraient les trouver
+                    un brin plus complexes à appréhender.</div>
+                  <div class="col-md-12"><br>
+                  </div>
+                  <div class="col-md-12"><br>
+                  </div>
+                  <div class="col-md-12"><img src="assets/img/blog-immo/table.gif"
+                      alt="">
                     <div class="content-main single-post padDiv"><br>
                     </div>
                     <div class="content-main single-post padDiv"><br>
