@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>AS BI - Real Estate Report</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i%7CPlayfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i"
+
+      rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- =======================================================
+  * Template Name: Folio  * Updated: Jul 27 2023 with Bootstrap v5.3.1  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/  * Author: BootstrapMade.com  * License: https://bootstrapmade.com/license/  ======================================================== -->
+  </head>
+  <body> <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""
+
+            class="img-fluid"></a>
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="index.html#portfolio">Home</a></li>
+            <li class="dropdown"><a href="index.html#portfolio"><span>Galerie</span></a>
+            <li class="dropdown"><a href="index.html#portfolio"><span>Contenu</span></a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i> </nav>
+        <!-- .navbar --> </div>
+    </header>
+    <!-- End Header -->
+    <main id="main">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <!-- Breadcrumbs Section -->
+      <!-- ======= Portfolio Details Section ======= -->
+      <div class="main-content paddsection">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="row">
+                <div class="container-main single-main">
+                  <div class="col-md-12"> <br>
+                    <div class="content-main single-post padDiv">
+                      <div class="journal-txt">
+                        <h4>GEOCODER SIMPLEMENT VOS DIMENSIONS</h4>
+                      </div>
+                      <div class="post-meta">
+                        <ul class="list-unstyled mb-0">
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="content-main single-post padDiv">Dans le monde
+                      des données d'entreprise, l'information géographique est
+                      l'une des clés de la prise de décision éclairée. Savoir où
+                      se trouvent vos clients, vos magasins ou vos partenaires
+                      commerciaux peut faire la différence entre le succès et la
+                      stagnation. Mais pour accéder à cela, vous allez avoir
+                      besoin d'un élément essentiel : les coordonnées
+                      géographiques. Les coordonnées vous permettront de relier
+                      votre performance avec d'autres type d'outils ou
+                      d'informations : météorologie, zone de chalandise,
+                      intensité concurrentiel, trafic, revenus et demographie !</div>
+                    <div class="content-main single-post padDiv"><u><b>Prérequis:</b></u><br>
+                      <br>
+                      <ul style="text-align: justify;">
+                        <li> Un fichier CSV avec les adresses</li>
+                        <li>Clé API OpenCageData pour le service de géocodage</li>
+                        <li> La possibilité d'executer un code en python</li>
+                      </ul>
+                      <br>
+                      <div style="text-align: left;"><u><b><br>
+                          </b></u></div>
+                      <div style="text-align: left;"><u><b>1. Installez les
+                            bibliothèques suivantes :</b></u></div>
+                      <div style="text-align: left;"><u><b><br>
+                          </b></u></div>
+                      <div class="code-citation">
+                        <pre>    <code>
+pip install pandas
+pip install geopy
+pip install opencage </code></pre>
+                      </div>
+                      <div class="content-main single-post padDiv">Voici à quoi
+                        doit ressembler le fichier nommé magasin.csv </div>
+                      <img src="assets/img/coordonnees/tuto1/csvsource.png" alt=""></div>
+                    <div class="col-md-12"><br>
+                    </div>
+                    <div class="col-md-12"><br>
+                    </div>
+                    <div class="col-md-12"><u><b>2. Faites tourner ce script
+                          dans le même répertoire :</b></u></div>
+                    <div class="col-md-12">
+                      <div class="code-citation">
+                        <pre>    <code>
+<span style="color: #007400;"># Import des bibliothèques nécessaires</span>
+import pandas as pd
+from geopy.geocoders import Nominatim
+from opencage.geocoder import OpenCageGeocode
+
+<span style="color: #007400;"># Lecture du fichier CSV</span>
+df = pd.read_csv('<span style="color: #000099;">magasin.csv</span>')
+
+<span style="color: #007400;"># Paramétrage de la clé API OpenCageData</span>
+api_key = '<span style="color: #000099;">0123456789</span>'
+geocoder = OpenCageGeocode(api_key)
+
+<span style="color: #007400;"># Géocodez les adresses</span>
+def geocode_address(<span style="color: #000099;"></span>Address):
+    location = geocoder.geocode(<span style="color: #000099;"></span>Address)
+    if location:
+        return location[0]['geometry']
+    else:
+        return None
+
+df['coordinates'] = df['<span style="color: #000099;">Adresse</span>'].apply(geocode_address)
+
+<span style="color: #007400;"># Divisez les coordonnées en latitude et longitude</span>
+df[['latitude', 'longitude']] = pd.DataFrame(df['coordinates'].to_list(), index=df.index)
+
+<span style="color: #007400;"># Enregistrez dans un nouveau fichier CSV</span>
+df.to_csv('<span style="color: #000099;">magasin_geocoded.csv</span>', index=False, encoding='utf-8-sig')
+    </code>
+  </pre>
+                      </div>
+                      <div class="content-main single-post padDiv">Vous
+                        patientez et c'est terminé ! </div>
+                      <img src="assets/img/coordonnees/tuto1/csvgeocoded.png" alt="">
+                      <div class="content-main single-post padDiv">Gardez en
+                        tête que même avec une exhaustivité des données
+                        impéccable, le service de geocodage n'est pas
+                        infaillible et peut insérer de mauvaises
+                        interprétations. Sur une grosse volumétrie l'impact
+                        devient probablement négligeable mais sur une petite
+                        cardinalité autant le faire à la main pour s'assurer
+                        directement du bon emplacement.</div>
+                      <div class="content-main single-post padDiv">Vous pouvez
+                        maintenant passer à la suite :)</div>
+                      <div class="content-main single-post padDiv">
+                        <ul>
+                          <li> Trouver mes concurrents dans un rayon de x km
+                            (soon)</li>
+                          <li>Intégrer des données météo par unité commerciale
+                            (soon)</li>
+                        </ul>
+                      </div>
+                      <div class="content-main single-post padDiv"><br>
+                      </div>
+                    </div>
+                    <!-- End Portfolio Details Section --> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <div id="footer" class="text-center">
+      <div class="container">
+        <div class="socials-media text-center">
+          <ul class="list-unstyled">
+            <li><a href="https://www.linkedin.com/in/alexandre-steinmann-a6364297/"><i
+
+                  class="bi bi-linkedin"></i></a><br>
+            </li>
+          </ul>
+        </div>
+        <p>Design © Copyrights Folio. All rights reserved.</p>
+        <div class="credits">
+          <!--
+        All the links in the footer should remain intact.        You can delete the links only if you purchased the pro version.        Licensing information: https://bootstrapmade.com/license/        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio      -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
